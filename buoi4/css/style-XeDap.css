@@ -1,0 +1,111 @@
+/* ---- reset css ---- */
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    /* 1 rem = 10 px */
+    font-size: 62.5%;   
+}
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+/* common css */
+a {
+    text-decoration: none; /* ko có gạch chân thẻ link */
+}
+button {
+    cursor: pointer;
+}
+input, textarea, button {
+    outline: none; /* mặc định click chuột vào input, đg viền mờ mờ ở ngoài ... => bỏ nó đi */
+    box-shadow: none; /* ko có bóng gì cả */
+    font-family: 'Lato', sans-serif;
+}
+/* khai báo biến css */
+:root {
+    --primaryColor: #64c29e;
+    --HeadingColor: #353738;
+    --textColor: #848789;
+    --bgWhite: #ffffff;
+    --bgLight: #f7f7f7;
+}
+/* ----------------------------- */
+/* wrapper */
+div.wrapper {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.header {
+    min-height: 80rem;
+    background-image: url('../img/bgHeader.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav {
+    margin-top: 3.5rem;
+}
+.nav__list {
+    /* dàn thẻ li trên hàng ngang */
+    display: flex;
+    /* các thẻ li dàn chính giữa của thẻ ul */
+    align-items: center;
+
+}
+.nav__item {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    position: relative;
+    
+}
+.nav__item:first-child::after, .nav__item:nth-child(4)::after {
+    position: absolute;
+    content: '.';
+    bottom: 0;
+    right: 0;
+    font-size: 2rem;
+    color:  var(--HeadingColor);
+}
+.nav__link {
+    color:  var(--HeadingColor);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    /* display: block;
+    position:  relative; */
+}
+.nav__item:hover {
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

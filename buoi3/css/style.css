@@ -1,0 +1,163 @@
+
+/* ---- reset css ---- */
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+}
+html {
+    /* 1 rem = 10 px */
+    font-size: 62.5%;
+    line-height: 1;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* khai báo biến css */
+:root {
+    /* html selector */
+    --colorText: blue;
+}
+
+/* --------------------------------------------- */
+
+div.box {
+    width: 30rem;
+    height: 30rem;
+    display: inline-block;
+    
+}
+
+div.box-1 {
+    border: thin red solid; 
+    padding: 1rem 0 0 1.5rem;
+}  
+p.title {
+    background-color: yellow;
+}
+div.box-2 {
+    border: thin blue solid;
+    /* margin-top: 1rem; */
+}
+
+/* --------------------------------------------- */
+
+div.parent {
+    width: 60rem;
+    height: 10rem;
+    background-color: rgb(236, 255, 248);
+}
+div.child {
+    width: 10rem;
+    height: 10rem;
+
+}
+div.child-1 {
+    background-color: blue;
+    float: left;
+}
+div.child-2 {
+    background-color: red;
+    float: left;
+}
+div.clear {
+    clear: both;
+}
+div.child-3 {
+    background-color: yellow;
+}
+
+/* --------------------------------------------- */
+
+/* -- position -- */
+div.content {
+    width: 30rem;
+    height: 30rem;
+    border: thin solid black;
+    position: relative;
+}
+div.content__child {
+    width: 10rem;
+    height: 10rem;
+    background-color: yellow;
+    position: absolute;
+    top: -20rem;
+
+}
+
+
+
+
+
+
+
+/* --------------------------------------------- */
+
+/* kí tự đầu tiên */
+p.text::first-letter {
+    font-size: 5rem;
+    color: red;
+}
+/* dòng văn bản đầu tiên */
+p.text::first-line {
+    color: var(--colorText);
+}
+/* thêm văn bản lên đầu text */
+p.text::before {
+    content: 'văn bản đầu tiên';
+    color: red; 
+}
+/* thêm văn bản vào cuối text */
+p.text::after {
+    /* content: url("../img/hinh-anh-nen-trai-tim-dep-nhat-4k.jpg"); */
+    content: 'cuối văn bản';
+    color: red;
+}
+/* bôi đen sẽ đổi thành vàng khi người dùng bôi */
+p.text::selection {
+    color: yellow;
+}
+
+/* --------------------------------------------- */
+
+div.content1 {
+    width: 40rem;
+    height: 40rem;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div.content__child1 {
+    width: 20%;
+    height: 50%; 
+    font-size: 3rem; 
+}
+div.content1 :nth-child(1) {
+    background-color: red;
+}
+div.content1 :nth-child(2) {
+    background-color: blue;
+}
+div.content1 :nth-child(3) {
+    background-color: yellow;
+}
+div.content1 :nth-child(4) {
+    background-color: grey;
+}
+div.content1 :nth-child(5) {
+    background-color: greenyellow;
+}
+div.content1 :nth-child(6) {
+    background-color: orange;
+}
+
+
+
+
+
+
+
+
+
+

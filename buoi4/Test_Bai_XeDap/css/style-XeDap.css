@@ -1,0 +1,533 @@
+/* ---- reset css ---- */
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    /* 1 rem = 10 px */
+    font-size: 62.5%;   
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+/* common css */
+a {
+    text-decoration: none; /* ko có gạch chân thẻ link */
+}
+button {
+    cursor: pointer;
+}
+input, textarea, button {
+    outline: none; /* mặc định click chuột vào input, đg viền mờ mờ ở ngoài ... => bỏ nó đi */
+    box-shadow: none; /* ko có bóng gì cả */
+    font-family: 'Lato', sans-serif;
+}
+/* khai báo biến css */
+:root {
+    --primaryColor: #64c29e;
+    --HeadingColor: #353738;
+    --textColor: #848789;
+    --bgWhite: #ffffff;
+    --bgLight: #f7f7f7;
+}
+div.clear {
+    clear: both;
+}
+/* ----------------------------- */
+/* wrapper */
+div.wrapper {
+    max-width: 160rem;
+    margin: 0 auto;
+    max-height: 499.1rem;
+}
+.header {
+    min-height: 80rem;
+    background-image: url('../img/bgHeader.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav {
+    margin-top: 3.5rem;
+}
+.nav__list {
+    /* dàn thẻ li trên hàng ngang */
+    display: flex;
+    /* các thẻ li dàn chính giữa của thẻ ul */
+    align-items: center;
+
+}
+.nav__item {
+    /* padding-left: 4rem;
+    padding-right: 4rem; */
+    padding: 1rem 4rem;
+    position: relative;
+    
+}
+.nav__item:first-child::after, .nav__item:nth-child(4)::after {
+    position: absolute;
+    content: '.';
+    bottom: 1rem;
+    right: 0;
+    font-size: 2rem;
+    color:  var(--HeadingColor);
+}
+.nav__link {
+    color:  var(--HeadingColor);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    /* display: block;
+    position:  relative; */
+}
+.nav__hoverr:hover {
+    background-color: aqua;
+}
+/* khối thứ 2 */
+.khoi-thu-hai {
+    min-height: 46.9rem;
+    background-color: var(--bgLight);
+    display: flex;
+	flex-direction: column;
+	text-align: center;
+    align-items: center;
+    position: relative;
+}
+.logo-2 {
+    position: absolute;
+    width: 5.1rem;
+    height: 4.3rem;
+    /* background-color: aquamarine; */
+    top: 11.6rem;
+}
+.text-1 {
+    position: absolute;
+    width: 45.3rem;
+    height: 2.7rem;
+    /* background-color: rgb(252, 255, 196); */
+    padding: 0 4.6rem 0 4.6rem;
+    font-size: 1.8rem;
+    color: var(--HeadingColor);
+    font-weight: 700;
+    top: 19.2rem;
+}
+.text-2 {
+    position: absolute;
+    width: 104.848rem;
+    height: 19rem;
+    /* background-color: rgb(216, 184, 255); */
+    font-size: 1.8rem;
+    color: var(--textColor);
+    font-weight: 400;
+    line-height: 3.4rem;
+    top: 24.1rem;
+    display: flex;
+	align-content: center;  
+    word-spacing: -0.15rem;
+}
+
+/* AOD New York  @aod  /  35 min */
+.text-2-nghieng {
+    position: absolute;
+    width: 104.848rem;
+    height: 6.5rem;
+    /* background-color: rgb(216, 184, 255); */
+    font-size: 1.8rem;
+    color: var(--textColor);
+    font-weight: 400;
+    line-height: 3.4rem;
+    top: 24.1rem;
+    display: flex;
+	align-content: center;  
+    font-style: italic;
+    font-size: 2.4rem;
+    word-spacing: -0.01rem;
+}
+
+/* 3 dòng nhỏ trog 1 khối to 1600- 1800*/
+.khoi-to {
+    min-height: 180rem;
+    background-color: var(--bgWhite);
+    
+}
+.khoi-1 {
+    width: 106.7rem;
+    height: 60rem;
+    background-color: aquamarine;
+    float: left;
+    text-align: center;
+    justify-content: center;  
+}
+img[src="./img/logo_xedap1.png"] {
+    position: relative;
+    top: 24rem;
+}
+img[src="./img/logo_5.png"] {
+    position: relative;
+    top: 22.4rem;
+}
+.khoi-2 {
+
+    width: 53.3rem;
+    height: 60rem;
+    background-color: rgb(255, 200, 129);
+    float: left;
+    text-align: center;
+    justify-content: center;  
+}
+img[src="./img/logo_6.png"] {
+    position: relative;
+    top: 26.6rem;
+}
+.khoi-3 {
+    width: 53.4rem;
+    height: 60rem;
+    background-color: rgb(102, 200, 129);
+    float: left;
+}
+.img-1 {
+    background-image: url('../img/anh-xedap-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.img-2 {
+    background-image: url('../img/anh-xe-dap-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.img-3 {
+    background-image: url('../img/anh-xe-dap-3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.img-4 {
+    background-image: url('../img/anh-xe-dap-5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.vintage-olia1 {
+    position: relative;
+    height: 40rem;
+    background-color: var(--bgWhite);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.txt-logo {
+    position: absolute;
+    width: 4.7rem;
+    height: 2.9rem;
+    /* background-color: red; */
+    top: 7rem;
+}
+.txt-tieu-de {
+    position: absolute;
+    width: 25rem;
+    height: 1.7rem;
+    top: 13rem;
+    /* background-color: yellow; */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--HeadingColor);
+    text-transform: uppercase;
+}
+.txt-van-ban {
+    position: absolute;
+    width: 39.748rem;
+    height: 14.7rem;
+    top: 17rem;
+    /* background-color: azure; */
+    font-size: 1.599rem;
+    font-weight: 400;
+    color: var(--textColor);
+    display: flex;
+    text-align: justify;
+    line-height: 2.99rem;
+    word-spacing: -0.1rem;
+}
+.gach-ngang {
+    position: absolute;
+    width: 5rem;
+    height: 0.3rem;
+    color: var(--textColor);
+    top: 34.5rem;
+}
+
+.vintage-olia2 {
+
+    height: 20rem;
+    background-color: orangered;
+}
+.yen-xe-1 {
+    background-image: url("../img/anh-yen-xe.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.yen-xe-2 {
+    background-image: url("../img/anh-yen-xe-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.yen-xe-3 {
+    background-image: url("../img/anh-xe-dap-4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* các loại yên xe */
+.yen-xe-dap {
+    min-height: 53.4rem;
+    background-color: aquamarine;
+    position: relative;
+}
+.yen-xe-dap-1 {
+    width: 53.3rem;
+    height: 53.4rem;
+    background-color: rgb(178, 216, 250);
+    float: left;    
+}
+.yen-xe-dap-nho-1 {
+    width: 26.6rem;
+    height: 26.6rem;
+    background-color: rgb(180, 143, 249);
+    float: left;
+}
+
+.yen-xe-dap-nho-2 {
+    width: 53.3rem;
+    height: 26.8rem;
+    background-color: rgb(106, 255, 150);
+    float: left;
+    /* background-image: url("../img/yen-xe-03.png"); */
+}
+
+/* 53,3 26,7 */
+.nha-giay {
+    width: 53.3rem;
+    height: 26.7rem;
+    float: left;
+    background-color: red;
+    position: relative;
+}
+.bg-nha-giay-tren {
+    background-image: url("../img/nha-giay-1.png");
+}
+img[src="./img/logo-chen-len-anh-xanh.png"]{
+    position: absolute;
+    top: 10.6rem;
+    left: 21.6rem;
+}
+.nha-giay-chia-hai {
+    width: 26.65rem;
+    height: 26.67rem;
+    float: left;
+}
+
+.yen-xe-dap-2 {
+    height: 53.4rem;
+    width: 53.4rem;
+    background-color: #848789;
+    float: left;    
+}
+.xe-dap-nau-den {
+    width: 26.7rem;
+    float: left;
+}
+
+/* DISCOVER THE SHOP */
+.discover-the-shop {
+    min-height: 20rem;
+    width: 160rem;
+    background-color: #282f35;
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#nut-btn {
+    position: absolute;
+    
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: white;
+    background-color: #282f35;
+    padding: 2rem 5rem;
+    border: solid 0.3rem #94979a;
+}
+
+/* Stay on the saddle! */
+.stay-on-the-saddle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 160rem;
+    height: 47rem;
+    background-color: var(--bgWhite);
+    font-size: 2.4rem;
+    font-style: italic;
+    color: #848789;
+}
+#stay-logo {
+    position: absolute;
+    top: 10.7rem;
+}
+.txtt {
+    position: absolute;
+    top: 23rem;
+}
+#email {
+    position: absolute;
+    top: 29rem;
+    left: 53.3rem;
+    font-style: italic;
+    font-size: 2rem;
+    color: #d3d7d9;
+    padding: 2.9rem 2.8rem;
+    width: 40rem;
+    height: 6.7rem;
+    border: solid 0.2rem #d3d7d9;
+}
+
+#btn-go {
+    position: absolute;
+    top: 29rem;
+    left: 94.1rem;
+    padding: 1.9rem 4.4rem;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--bgWhite);
+    border: none;
+    background-color: var(--primaryColor);
+}
+
+/* chân trang */
+.chan-trang {
+    min-height: 25rem;
+    position: relative;
+    display: flex;
+    background-color: #f7f7f7;
+}
+.chan-trang-53-33 {
+    position: relative;
+    width: 53.3rem;
+    height: 25rem;
+    font-style: italic;
+    font-size: 1.39rem;
+    color: var(--textColor);
+    /* top: 10.6rem; */
+}
+.chan-trang-53-3 {
+    position: relative;
+    width: 53.3rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 25rem;
+    font-style: italic;
+    font-size: 1.39rem;
+    color: var(--textColor);
+    top: 10.6rem;
+    line-height: 2.5rem;
+}
+#yebo {
+   
+    margin-left: 1.5rem;
+}
+
+.chan-trang-53-4 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 53.4rem;
+    height: 25rem;  
+}
+.ba-hinh-anh1 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    left: 20rem;
+    top: 10.8rem;
+}
+.ba-hinh-anh2 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    left: 25.5rem;
+    top: 10.8rem;
+}
+.ba-hinh-anh3 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    right: 19rem;
+    top: 10.8rem;
+}
+
+.chan-24-5 {
+    position: absolute;
+    left: 24.5rem;
+    top: 9.5rem;
+    line-height: 1.787rem;
+}
+#aod {
+    font-size: 1.6rem;
+    font-weight: 700;   
+    color: var(--textColor); 
+}
+.txt-nho {
+    color: var(--textColor); 
+    font-size: 1.39rem;
+    font-style: italic;  
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,247 @@
+/* SELECTOR CSS */
+
+/* #title {
+    color: yellow;
+} */
+.title {
+    color: blue;
+}
+h2.title.active {
+    color: red;
+}
+
+
+/* tìm tất cả giá trị có kí tự là 'ut' */
+input[class*="ut"] { 
+    border: 1px solid red;
+}
+
+
+/* tìm chính xác 1 trong nhiều giá trị */
+/* input[class~="email"] { 
+    border: 1px solid red;
+} */
+
+
+/*  tìm kí tự cuối cùng so khớp, ví dụ bỏ chữ m ở .com đi thì nó sẽ ko tìm thấy để css */
+/* a[href$=".com"] {
+    color: pink;
+} */
+
+
+/* so sánh kí tự từ trái qua phải */
+/* a[href^="http"] {
+    color: pink;
+} */
+
+/* check điều kiện: phải là giá trị bắt đầu, đầu tiên, giá trị bắt buộc phải là 'text', 
+sau text bắt buộc phải có dấu '-', đằng sau là gì thì ko quan tâm */
+p[class|="text"] {
+    color: orange;
+}
+
+
+.header > .nav .nav__text-logo {
+    color: red;
+}
+
+section.content > div.main + div.sidebae > div.menu 
+~ p.title > a.link {
+    color: yellowgreen;
+}
+
+body {
+    background-color: azure;
+    margin: 0;
+    padding: 0;
+}
+
+.textt-color, .title-color {
+    color: blue;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* chọn thành phần con đầu tiên */
+div.container :first-child {
+    color: red;
+}
+
+/* tìm kiếm loại con đầu tiên của những loại con khác nhau  tính từ trên xuống dưới*/
+div.container :first-of-type {
+    color: green;
+}
+
+/* chọn thành phần con cuối cùng */
+div.container :last-child {
+    color: blue;
+}
+
+/* chọn phần tử con cuối cùng hoặc duy nhất tính từ trên xuống dưới*/
+div.container :last-of-type {
+    color: yellow;
+}
+
+/* tính từ trên xuống dưới lấy thành phần vị trí thứ 4 */
+div.container :nth-child(4) {
+    color: violet;
+}
+
+/* chòn thành phần thứ 4 */
+div.container :nth-of-type(4) {
+    color: orangered;
+}
+
+/* tính từ dưới lên lấy thành phần vị trí thứ 4 */
+div.container :nth-last-child(4) {
+    color: gray;
+}
+
+/* tính từ trên xuống lấy thành phần con thứ 2 */
+div.container :nth-last-of-type(2) {
+    color: brown;
+}
+
+/* lấy những thằng nào là con duy nhất */
+div.container div.box :only-child {
+    color: blue;
+}
+
+/* thành phần sẽ được focus khi chọn, 
+ví dụ: thẻ input dưới đây, khi ta chọn vào 1 thẻ input nào đó thì tự khắc nó sẽ đổi nền vàng
+*/
+input:focus {
+    background-color: yellow;
+    border: solid 1px rgb(161, 161, 161);
+    -webkit-box-shadow: 0px 10px 13px -7px #fcc8c8, 2px 3px 20px -4px rgb(255, 0, 0); 
+    box-shadow: 0px 10px 13px -7px #ffb9b9, 2px 3px 20px -4px red;
+    border-radius: 100px;
+}
+input {
+    height: 20px;
+    width: 200px;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+/* thay đổi nút radio to hơn khi được chọn */
+input[type="radio"]:checked {
+    height: 20px;
+    width: 20px;
+}
+
+/* chọn các liên kết đã được chọn */
+a[href*="#"]:active {
+    color: rgb(0, 34, 255);
+    background-color: rgb(163, 255, 181);   
+    text-decoration: none;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+
+/* văn bản khi dk chọn sẽ đổi thành đỏ */
+p.p::selection {
+    color: red;
+}
+
+/* Thêm văn bản vào cuối của thành phần */
+p.p::after {
+    content: 'Thêm văn bản vào cuối cùng của chuỗi';
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* thêm văn bản vào đầu tiên của thành phần */
+p.p::before {
+    content: 'Thêm văn bản lên đầu tiên của chuỗi';
+    color: tomato;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* phần tử mô tả cho kí tự đầu tiên của văn bản */
+p.p::first-letter {
+    background-color: aqua;
+    color: black;
+    font-size: 30px;
+    font-family: 'fiolex girl';
+}
+
+/* Quy định định style cho dòng đầu tiên */
+p.p::first-line {
+    font-style: italic;
+}
+
+/* ------------------------------------- */
+/* các thuộc tính của chữ */
+p.trang {
+    font-family: 'fiolex girl';
+    font-size: 50px;
+    color: red;
+    font-style: initial;
+    font-weight: bolder;
+    direction: ltr; /* được sử dụng để thiết lập hướng văn bản: trl or rtl */
+    letter-spacing: 0.6cm; /* được sử dụng để thêm khoảng cách */
+    text-indent: 2cm; /* được sử dụng để tạo độ thụt xa lề trái 1 khoảng nào đó của text */
+
+    /* được sử dụng để tạo dấu gạch chân ở trên, dưới, gạch ngang hoặc ko có 
+        overline: gạch ở trên
+        underline: gạch chân
+        line-through: gạch ngang
+        none: xóa bỏ dấu gạch <nếu có>
+    */
+    text-decoration: none; 
+    text-transform: none; /* được sử dụng để đổi chữ hoa thành thường or ngc lại...*/
+    text-shadow: 5px 5px rgb(143, 255, 244); /* tạo viền chữ .... */
+}
+p.trang::selection{
+    color: rgb(26, 30, 255);   
+    background-color: rgb(149, 255, 152);
+}
+p.trang::first-letter {
+    color: black;
+    font-size: 100px;
+}
+p.trang::first-line {
+    background-color: rgb(255, 255, 162);
+}
+
+/* ------------------------------------- */
+/* các thuộc tính và giá trị định dạng nền */
+
+div.anhnen {
+    width: 700px;
+    height: 500px;
+    background-color: beige;
+    background-image: url("../img/hinh-anh-nen-trai-tim-dep-nhat-4k.jpg");
+    background-size: cover;
+
+}
+img[src="./img/cay tinh yeu hinh trai tim photo (7).jpg"] {
+    width:200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
